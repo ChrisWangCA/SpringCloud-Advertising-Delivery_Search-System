@@ -1,0 +1,62 @@
+#spring:
+#  application:
+#    name: ad-eureka
+#
+#server:
+#  port: 8000
+#
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    fetch-registry: false # 不从注册中心获取信息
+#    register-with-eureka: false # 不向注册中心注册自己
+#    service-url:
+#      defaultZone: https://${eureka.instance.hostname}:${server.port}/eureka/
+
+---  # 分隔符 in yml
+spring:
+  applciation:
+    name: ad-eureka
+  profiles: server1
+server:
+  port: 8000
+eureka:
+  instance:
+    hostname: server1
+    prefer-ip-address: false
+  client:
+    service-url:
+      defaultZone: https://server2:8001/eureka/,https://server3:8002/eureka/
+
+
+---  # 分隔符 in yml
+spring:
+  applciation:
+    name: ad-eureka
+  profiles: server2
+server:
+  port: 8001
+eureka:
+  instance:
+    hostname: server2
+    prefer-ip-address: false
+  client:
+    service-url:
+      defaultZone: https://server1:8000/eureka/,https://server3:8002/eureka/
+
+
+---  # 分隔符 in yml
+spring:
+  applciation:
+    name: ad-eureka
+  profiles: server3
+server:
+  port: 8002
+eureka:
+  instance:
+    hostname: server3
+    prefer-ip-address: false
+  client:
+    service-url:
+      defaultZone: https://server1:8000/eureka/,https://server2:8001/eureka/
