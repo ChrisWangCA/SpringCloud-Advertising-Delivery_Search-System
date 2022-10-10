@@ -3,6 +3,9 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/ad-eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ad-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/me-ad-service/ad-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/me-ad-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/me-ad-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

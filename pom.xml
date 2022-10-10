@@ -11,6 +11,8 @@
     <modules>
         <module>ad-eureka</module>
         <module>ad-gateway</module>
+        <module>me-ad-service</module>
+        <module>me-ad-service/ad-common</module>
     </modules>
 
     <name>ad-spring-cloud</name>
