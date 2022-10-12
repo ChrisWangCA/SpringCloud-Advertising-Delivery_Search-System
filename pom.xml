@@ -13,6 +13,7 @@
         <module>ad-gateway</module>
         <module>me-ad-service</module>
         <module>me-ad-service/ad-common</module>
+        <module>me-ad-service/ad-sponsor</module>
     </modules>
 
     <name>ad-spring-cloud</name>
