@@ -13,7 +13,7 @@ import java.util.List;
 
 public interface AdPlanRepository extends JpaRepository<AdPlan, Long> {
 
-    AdPlan findByUserId(Long id, Long userId);
+    AdPlan findByIdAndUserId(Long id, Long userId);
 
     List<AdPlan> findAllByIdInAndUserId(List<Long> ids, Long userId);
 
