@@ -45,3 +45,6 @@ adconf:
     password: 123456
     binlogName: ""
     position: -1
+
+  kafka:
+    topci: ad-search-mysql-data
