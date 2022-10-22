@@ -1,11 +1,11 @@
 server:
-  port: 7000
+  port: 7001
   servlet:
-    context-path: /ad-sponsor  #代表所有的服务都在这个路径下
+    context-path: /ad-search  #代表所有的服务都在这个路径下
 
 spring:
   application:
-    name: eureka-client-ad-sponsor
+    name: eureka-client-ad-search
   jpa:
     show-sql: true #是否在控制台打印sql语句
     hibernate:
@@ -24,6 +24,28 @@ spring:
       initial-size: 2
 eureka:
   client:
+    enabled: false
     service-url:
       defaultZone: http://server1:8000/eureka/
-    enabled: false
+
+feigh:
+  hystrix:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #暴露所有的端点
+
+adconf:
+  mysql:
+    host: 127.0.0.1
+    port: 3306
+    username: root
+    password: 123456
+    binlogName: ""
+    position: -1
+
+  kafka:
+    topci: ad-search-mysql-data

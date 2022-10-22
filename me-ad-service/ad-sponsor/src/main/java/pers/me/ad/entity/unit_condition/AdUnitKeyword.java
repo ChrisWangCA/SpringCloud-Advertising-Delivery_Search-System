@@ -13,8 +13,6 @@ import javax.persistence.*;
  */
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "ad_unit_keyword")
 public class AdUnitKeyword {

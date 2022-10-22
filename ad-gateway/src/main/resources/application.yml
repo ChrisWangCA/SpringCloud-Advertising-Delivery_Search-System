@@ -15,4 +15,7 @@ zuul:
       path: /ad-sponsor/** #所有以/ad-sponsor开头的请求都会转发到ad-sponsor的微服务
       serviceId: eureka-client-ad-sponsor #ad-sponsor微服务的服务名
       strip-prefix: false #不跳过前缀 如果为true则会跳过前缀会报404
-
+    search:
+      path: /ad-search/**
+      servicedId: eureka-client-ad-search
+        strip-prefix: false

@@ -13,8 +13,6 @@ import java.io.Serializable;
  */
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class CommonResponse<T> implements Serializable {
 
     private Integer code;

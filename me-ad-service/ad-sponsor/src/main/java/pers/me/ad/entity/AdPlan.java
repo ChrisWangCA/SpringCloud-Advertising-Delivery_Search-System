@@ -15,8 +15,6 @@ import java.util.Date;
  * @date 2022-10-11
  */
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "ad_plan")
 public class AdPlan {

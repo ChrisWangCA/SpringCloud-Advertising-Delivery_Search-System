@@ -14,8 +14,6 @@ import java.util.Date;
  * @date 2022-10-11
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity //标记为实体类
 @Table(name = "ad_user") //指定表名
 public class AdUser {

@@ -15,6 +15,7 @@
         <module>me-ad-service/ad-common</module>
         <module>me-ad-service/ad-sponsor</module>
         <module>me-ad-service/ad-search</module>
+        <module>me-ad-service/ad-dashboard</module>
     </modules>
 
     <name>ad-spring-cloud</name>

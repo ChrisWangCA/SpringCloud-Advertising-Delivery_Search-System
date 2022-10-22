@@ -11,6 +11,9 @@ import pers.me.ad.annotation.IgnoreResponseAdvice;
 import pers.me.ad.client.SponsorClient;
 import pers.me.ad.client.vo.AdPlan;
 import pers.me.ad.client.vo.AdPlanGetRequest;
+import pers.me.ad.search.ISearch;
+import pers.me.ad.search.vo.SearchRequest;
+import pers.me.ad.search.vo.SearchResponse;
 import pers.me.ad.vo.CommonResponse;
 
 import java.util.List;
@@ -24,15 +27,25 @@ import java.util.List;
 @RestController
 public class SearchController {
 
+    private final ISearch search;
+
     private final RestTemplate restTemplate;
 
     private final SponsorClient sponsorClient;
 
     @Autowired
-    public SearchController(RestTemplate restTemplate, SponsorClient sponsorClient) {
+    public SearchController(ISearch search, RestTemplate restTemplate, SponsorClient sponsorClient) {
+        this.search = search;
         this.restTemplate = restTemplate;
         this.sponsorClient = sponsorClient;
     }
+
+    @PostMapping("/fetchAds")
+    public SearchResponse fetchAds(@RequestBody SearchRequest request){
+        log.info("ad-search: fetchAds -> {}", JSON.toJSONString(request));
+        return search.fetchAds(request);
+    }
+
 
     @IgnoreResponseAdvice
     @PostMapping("/getAdPlans")

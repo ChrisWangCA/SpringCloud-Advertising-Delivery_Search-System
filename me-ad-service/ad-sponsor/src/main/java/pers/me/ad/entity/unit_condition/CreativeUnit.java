@@ -12,8 +12,6 @@ import javax.persistence.*;
  * @date 2022-10-12
  */
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "creative_unit")
 public class CreativeUnit {
