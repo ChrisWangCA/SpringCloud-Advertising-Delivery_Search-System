@@ -6,9 +6,13 @@ Backend: jdk1.8/SpringCloud:Finchley.RELEASE/Kafka2.0/Maven3.0+
 database: mysql 8.0+
 
 Modules that have been built so far:
+
 Posting module
+
 Search module
+
 Common module
+
 Microservice Invocation Module
 
 
