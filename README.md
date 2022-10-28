@@ -14,10 +14,15 @@ database: mysql 8.0+
 Project Development Description.
 
 Advertising system skeleton development
+
 Microservice common module development
+
 Ad Delivery System Development
+
 Ad Retrieval System - Microservice Call
+
 Retrieval system - data index design and implementation
+
 Retrieval system-loading full index
 Retrieval system-listening to Binlog to construct incremental data, and data delivery
 Retrieval system-ad retrieval service
